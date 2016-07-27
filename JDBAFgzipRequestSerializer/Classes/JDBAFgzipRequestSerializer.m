@@ -1,5 +1,5 @@
 #import "JDBAFgzipRequestSerializer.h"
-//#import "GZIP.h"
+#import <GZIP/GZIP.h>
 
 @interface JDBAFgzipRequestSerializer ()
 @property (readwrite, nonatomic, strong) id <AFURLRequestSerialization> serializer;
@@ -31,8 +31,7 @@
 
     if (!serializationError && mutableRequest.HTTPBody) {
         NSError *compressionError = nil;
-        //NSData *compressedData = [mutableRequest.HTTPBody gzippedData];
-        NSData *compressedData = mutableRequest.HTTPBody;
+        NSData *compressedData = [mutableRequest.HTTPBody gzippedData];
 
         if (compressedData && !compressionError) {
             [mutableRequest setValue:@"gzip" forHTTPHeaderField:@"Content-Encoding"];

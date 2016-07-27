@@ -1,5 +1,4 @@
-#import "AFURLRequestSerialization.h"
-
+#import <JDBAFNetworking/AFURLRequestSerialization.h>
 @interface JDBAFgzipRequestSerializer : AFHTTPRequestSerializer
 
 @property (readonly, nonatomic, strong) id <AFURLRequestSerialization> serializer;

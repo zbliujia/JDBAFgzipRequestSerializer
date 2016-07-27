@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'JDBAFgzipRequestSerializer'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of JDBAFgzipRequestSerializer.'
+  s.summary          = 'JDBAFgzipRequestSerializer'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,17 +18,17 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+JDBAFgzipRequestSerializer a
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/JDBAFgzipRequestSerializer'
+  s.homepage         = 'https://github.com/zbliujia/JDBAFgzipRequestSerializer'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'liujia' => 'liujia@jiedaibao.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/JDBAFgzipRequestSerializer.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/zbliujia/JDBAFgzipRequestSerializer.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '7.0'
 
   s.source_files = 'JDBAFgzipRequestSerializer/Classes/**/*'
   
@@ -36,7 +36,8 @@ TODO: Add long description of the pod here.
   #   'JDBAFgzipRequestSerializer' => ['JDBAFgzipRequestSerializer/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'JDBAFgzipRequestSerializer/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'JDBAFNetworking', '~> 0.0.1'
+  s.dependency 'GZIP', '~> 1.0'
 end

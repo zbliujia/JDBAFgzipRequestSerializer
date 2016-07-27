@@ -1,11 +1,13 @@
 use_frameworks!
 
+source 'git@jdb-dev.com:ios/repos.git'                  # 咱们私有库
+source 'https://github.com/CocoaPods/Specs.git'         # 官方库
+
 target 'JDBAFgzipRequestSerializer_Example' do
   pod 'JDBAFgzipRequestSerializer', :path => '../'
 
   target 'JDBAFgzipRequestSerializer_Tests' do
     inherit! :search_paths
 
-    
   end
 end
